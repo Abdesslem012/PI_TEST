@@ -1,0 +1,32 @@
+[
+    {
+      "quizId": 1,
+      "title": "Programmation Python",
+      "description": "Testez vos connaissances en programmation Python avec ce quiz.",
+      "duration": 20
+    },
+    {
+      "quizId": 2,
+      "title": "Développement Web",
+      "description": "Quiz sur les technologies web, y compris HTML, CSS et JavaScript.",
+      "duration": 15
+    },
+  {
+    "quizId": 3,
+    "title": "Base de données SQL",
+    "description": "Testez vos compétences en SQL avec ce quiz sur les bases de données relationnelles.",
+    "duration": 10
+  },
+    {
+      "quizId": 4,
+      "title": "Langage de Balisage HTML",
+      "description": "Testez vos compétences en HTML avec ce quiz sur la langage de balisage utilisé pour structurer le contenu des pages web.",
+      "duration": 10
+    },
+    {
+      "quizId": 5,
+      "title": "La méthode Agile dans le développement logiciel",
+      "description": "Testez vos compétences sur la collaboration et l'adaptabilité dans le développement logiciel avec ce quiz sur la méthode Agile dans le développement logiciel.",
+      "duration": 10
+    }
+]

@@ -1,0 +1,507 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<style>
+    #searchInput {
+        width: 200px; /* Largeur du champ de recherche */
+        padding: 8px; /* Espacement interne du champ de recherche */
+        border: 1px solid #ccc; /* Bordure du champ de recherche */
+        border-radius: 4px; /* Coins arrondis */
+        font-size: 14px; /* Taille de la police */
+    }
+
+    #searchInput:focus {
+        outline: none; /* Supprime la bordure de focus */
+        border-color: dodgerblue; /* Couleur de la bordure lorsqu'il est en focus */
+    }
+    /* Style général du formulaire */
+    .form-container {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    /* Style des champs de saisie */
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    /* Style du bouton */
+    .form-button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Style des messages d'erreur */
+    .error-message {
+        color: red;
+        margin-bottom: 10px;
+    }
+
+
+</style>
+
+    <!-- Start Welcome area -->
+<div class="all-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="logo-pro">
+                    <a href="/home"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-advance-area">
+        <div class="header-top-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="header-top-wraper">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                </div>
+                                <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                    <div class="header-top-menu tabl-d-n">
+                                        <ul class="nav navbar-nav mai-top-nav">
+                                            <li class="nav-item"><a href="/home" class="nav-link">Home</a>
+                                            </li>
+                                            <li class="nav-item"><a href="#" class="nav-link">About Us</a>
+                                            </li>
+                                            <li class="nav-item"><a href="#" class="nav-link">SDGs</a>
+                                            </li>
+                                            <li class="nav-item dropdown res-dis-nn">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Services <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                                <div role="menu" class="dropdown-menu animated zoomIn">
+                                                    <a href="/addCourse" class="dropdown-item">Add Course</a>
+                                                    <a href="/addLesson" class="dropdown-item">Add Lesson</a>
+                                                    <a href="/addUnit" class="dropdown-item">Add Unit</a>
+                                                    <a href="/addSector" class="dropdown-item">Add Sector</a>
+                                                    <a href="/addStudent" class="dropdown-item">Add Student</a>
+                                                    <a href="/addTeacher" class="dropdown-item">Add Professor</a>
+                                                    <a href="/addClasse" class="dropdown-item">Add Classe</a>
+                                                    <a href="/addProgramme" class="dropdown-item">Add Programme</a>
+                                                    <a href="/addGroupeStudent" class="dropdown-item">Add Groupe</a>
+                                                    <a href="/addPresence" class="dropdown-item">Add Presence</a>
+                                                    <a href="/addRating" class="dropdown-item">Add Rating</a>
+                                                    <a href="/addQuiz" class="dropdown-item">Add Quiz</a>
+                                                    <a href="/addQuestion" class="dropdown-item">Add Question</a>
+                                                    <a href="/addObjective" class="dropdown-item">Add Objective</a>
+                                                    <a href="/addRessource" class="dropdown-item">Add Ressource</a>
+                                                    <a href="/addSpecialtie" class="dropdown-item">Add Specialite</a>
+                                                    <a href="/addEvent" class="dropdown-item">Add Event</a>
+                                                    <a href="/addFeedback" class="dropdown-item">Add Feedback</a>
+
+
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown res-dis-nn">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Pages <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                                <div role="menu" class="dropdown-menu animated zoomIn">
+                                                    <a href="/allCourse" class="dropdown-item">All Course</a>
+                                                    <a href="/allLesson" class="dropdown-item">All Lesson</a>
+                                                    <a href="/allUnit" class="dropdown-item">All Unit</a>
+                                                    <a href="/allSector" class="dropdown-item">All Sector</a>
+                                                    <a href="/allStudent" class="dropdown-item">All Student</a>
+                                                    <a href="/allTeacher" class="dropdown-item">All Professor</a>
+                                                    <a href="/allClasse" class="dropdown-item">All Classe</a>
+                                                    <a href="/allProgramme" class="dropdown-item">All Programme</a>
+                                                    <a href="/allGroupeStudent" class="dropdown-item">All Groupe</a>
+                                                    <a href="/allPresence" class="dropdown-item">All Presence</a>
+                                                    <a href="/allRating" class="dropdown-item">All Rating</a>
+                                                    <a href="/allQuiz" class="dropdown-item">All Quiz</a>
+                                                    <a href="/allQuestion" class="dropdown-item">All Question</a>
+                                                    <a href="/allObjective" class="dropdown-item">All Objective</a>
+                                                    <a href="/allRessource" class="dropdown-item">All Ressource</a>
+                                                    <a href="/allSpecialtie" class="dropdown-item">All Specialite</a>
+                                                    <a href="/allEvent" class="dropdown-item">All Event</a>
+                                                    <a href="/allFeedback" class="dropdown-item">All Feedback</a>
+
+
+
+                                                </div>
+                                            </li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                    <div class="header-right-info">
+                                        <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                            <li class="nav-item">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                    <img src="img/product/pro4.jpg" alt="" />
+                                                    <span class="admin-name">Bytes Minds</span>
+                                                    <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                                                </a>
+                                                <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                    <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                    </li>
+                                                    <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
+                                                    </li>
+                                                    <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated zoomIn">
+
+                                            </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list single-page-breadcome">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <form role="search" class="sr-input-func">
+                                                <input type="text" placeholder="Search..." class="search-int form-control">
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><span class="bread-blod">All Classes</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-status mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+                        <div class="container">
+                            <button onclick="AddClass()" class="btn btn-success custom-button">
+                                <i class="bi bi-plus-circle-fill"></i> Add Class
+                            </button>
+                            <br>
+                            <h2>List of Classes</h2>
+                            <div class="search-container">
+                                <input type="text" id="searchInput" placeholder="Rechercher par Code...">
+                                <div></div>
+
+                            </div>
+
+                            <br>
+                            <br>
+                            <ul id="classList" class="class-list"></ul>
+                        </div>
+
+                        <div class="container mt-5">
+                            <h1>Statistiques de la Classe</h1>
+                            <div id="classStats">
+                                <p>Total d'étudiants inscrits : <span id="totalStudents">0</span></p>
+                                <p>Moyenne des notes : <span id="averageGrade">0</span></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright 2024 Courzelo - Tous droits réservés</p>
+                            <p>Made with creativity by Byte Minds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+    <!-- tawk chat JS
+		============================================ -->
+    <script src="js/tawk-chat.js"></script>
+    <script>
+        function AddClass() {
+            window.location.href = "/addClasse"; // Rediriger vers une autre page
+        }
+        // Fonction pour charger la liste des classes depuis l'API
+        function loadClassList() {
+            fetch('/api/classess')
+                .then(response => response.json())
+                .then(data => {
+                    const classListContainer = document.getElementById('classList');
+                    classListContainer.innerHTML = ''; // Efface le contenu précédent
+
+                    const searchInput = document.getElementById('searchInput');
+                    const searchTerm = searchInput.value.toLowerCase(); // Convertit le terme de recherche en minuscules
+
+                    // Filtrer les classes en fonction du terme de recherche
+                    const filteredClasses = data.filter(classe => {
+                        return classe.name.toLowerCase().includes(searchTerm);
+                    });
+
+                    // Boucle à travers chaque classe filtrée pour afficher ses données
+                    filteredClasses.forEach(classe => {
+                        const classItem = document.createElement('li');
+                        classItem.classList.add('list-group-item');
+                        classItem.innerHTML = `
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Code of class:</strong> ${classe.name}
+                                    <br>
+                                    <strong>Niveau classe:</strong> ${classe.description}
+                                </div>
+                                <div>
+                                    <button class="btn btn-info" onclick="editClass(${classe.classeId})">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                    <button class="btn btn-sm btn-danger" onclick="confirmDelete(${classe.classeId})">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                        classListContainer.appendChild(classItem);
+                    });
+
+                    // Ajouter un message si aucune classe n'est trouvée
+                    if (filteredClasses.length === 0) {
+                        const noResultsItem = document.createElement('li');
+                        noResultsItem.textContent = 'Aucune classe trouvée.';
+                        classListContainer.appendChild(noResultsItem);
+                    }
+                })
+                .catch(error => console.error('Erreur lors du chargement de la liste des classes :', error));
+        }
+
+        // Appel de la fonction loadClassList au chargement de la page
+        document.addEventListener('DOMContentLoaded', loadClassList);
+
+        // Ajoutez un écouteur d'événements pour le champ de saisie de recherche afin de déclencher la recherche lorsque l'utilisateur entre du texte
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', loadClassList);
+
+        // Fonction pour ouvrir la page de modification d'une classe
+        function editClass(classeId) {
+            window.location.href = `/editClasse?id=${classeId}`;
+        }
+
+        // Fonction pour confirmer la suppression d'une classe
+        function confirmDelete(classeId) {
+            if (confirm("Are you sure you want to delete this class?")) {
+                deleteClass(classeId);
+            }
+        }
+
+        // Fonction pour supprimer une classe
+        function deleteClass(classeId) {
+            fetch(`/api/classess/${classeId}`, {
+                method: 'DELETE'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        loadClassList(); // Recharger la liste des classes après la suppression
+                    } else {
+                        throw new Error('Erreur lors de la suppression de la classe.');
+                    }
+                })
+                .catch(error => console.error('Erreur lors de la suppression de la classe:', error));
+        }
+    </script>
+
+<script>
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page lors de la soumission du formulaire
+        const className = document.getElementById('className').value;
+        fetch(`/api/classess/classes?name=${className}`)
+            .then(response => response.json())
+            .then(data => {
+                // Afficher les résultats de la recherche sur la page HTML
+                const classResultsElement = document.getElementById('classResults');
+                classResultsElement.innerHTML = ''; // Effacer les résultats précédents
+                data.forEach(classData => {
+                    const classElement = document.createElement('div');
+                    classElement.textContent = `${classData.name}: ${classData.description}`;
+                    classResultsElement.appendChild(classElement);
+                });
+            })
+            .catch(error => console.error('Erreur lors de la requête:', error));
+    });
+</script>
+
+<script>
+    // Fonction pour récupérer les statistiques de classe depuis l'API
+    function getClassStats() {
+        // Utilisez AJAX pour appeler votre API REST et récupérer les statistiques
+        // Par exemple, utilisez jQuery pour simplifier la requête AJAX
+        $.ajax({
+            url: '/api/classes/${classId}/stats',
+            type: 'GET',
+            success: function(data) {
+                // Mettez à jour les valeurs dans le HTML avec les données récupérées
+                $('#totalStudents').text(data.totalStudents);
+                $('#averageGrade').text(data.averageGrade);
+            },
+            error: function() {
+                // Gérez les erreurs si la récupération des statistiques échoue
+                console.log('Erreur lors de la récupération des statistiques.');
+            }
+        });
+    }
+
+    // Appelez la fonction pour récupérer et afficher les statistiques de classe au chargement de la page
+    getClassStats();
+</script>
+
+</body>
+
+</html>

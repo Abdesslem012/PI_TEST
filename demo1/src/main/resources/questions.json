@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "questionId": 1,
+      "text": "Qu'est-ce que signifie l'acronyme HTML?",
+      "possibleAnswers": ["Hypertext Markup Language", "Hyper Textual Markup Language", "Home Tool Markup Language", "Hypertext Markdown Language"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 2,
+      "text": "Quel langage de programmation est principalement utilisé pour la création de pages web dynamiques?",
+      "possibleAnswers": ["JavaScript", "Java", "Python", "Ruby"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 3,
+      "text": "Quelle est la fonction principale d'un serveur DNS?",
+      "possibleAnswers": ["Traduire les noms de domaine en adresses IP", "Héberger des sites web", "Filtrer les spams", "Sauvegarder les données"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 4,
+      "text": "Quel est le langage de programmation utilisé pour le développement d'applications mobiles sur la plateforme Android?",
+      "possibleAnswers": ["Java", "Kotlin", "Swift", "C++"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 5,
+      "text": "Qu'est-ce que signifie l'acronyme CSS?",
+      "possibleAnswers": ["Cascading Style Sheets", "Cascading Script Styles", "Creative Style Sheets", "Computer Style Sheets"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 6,
+      "text": "Quel protocole est utilisé pour sécuriser les transferts de données sur le web?",
+      "possibleAnswers": ["HTTPS", "HTTP", "FTP", "SSH"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 7,
+      "text": "Quelle est la principale fonctionnalité du langage SQL?",
+      "possibleAnswers": ["Interroger et manipuler des bases de données", "Styliser les pages web", "Créer des animations", "Compiler des programmes"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 8,
+      "text": "Quel langage de programmation est principalement utilisé pour le développement d'applications iOS?",
+      "possibleAnswers": ["Swift", "Objective-C", "Java", "Kotlin"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 9,
+      "text": "Quel est le principal avantage de l'utilisation de l'informatique en nuage (cloud computing)?",
+      "possibleAnswers": ["Évolutivité et flexibilité des ressources informatiques", "Vitesse de traitement des données", "Sécurité accrue des données", "Moins de dépendance aux fournisseurs"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 10,
+      "text": "Quel est le langage de balisage utilisé pour structurer le contenu des pages web?",
+      "possibleAnswers": ["HTML", "XML", "JSON", "CSS"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 11,
+      "text": "Quel est le principal objectif de la méthode Agile dans le développement logiciel?",
+      "possibleAnswers": ["Favoriser la collaboration et l'adaptabilité", "Maximiser les bénéfices financiers", "Minimiser la qualité des produits", "Réduire les coûts de développement"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 12,
+      "text": "Qu'est-ce que signifie l'acronyme API?",
+      "possibleAnswers": ["Application Programming Interface", "Automated Programming Interface", "Application Protocol Interface", "Automated Protocol Interface"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 13,
+      "text": "Quel est le langage de programmation principalement utilisé pour le développement de logiciels côté serveur?",
+      "possibleAnswers": ["JavaScript", "Python", "Java", "Ruby"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionId": 14,
+      "text": "Quelle est la fonction principale de la balise <canvas> en HTML5?",
+      "possibleAnswers": ["Permettre le dessin dynamique via des scripts JavaScript", "Afficher des images", "Stocker des données utilisateur", "Créer des formulaires interactifs"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 15,
+      "text": "Quel est le format de données largement utilisé pour l'échange de données structurées sur le web?",
+      "possibleAnswers": ["JSON (JavaScript Object Notation)", "XML (Extensible Markup Language)", "HTML (Hypertext Markup Language)", "YAML (YAML Ain't Markup Language)"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 16,
+      "text": "Quel est le protocole de transfert de courrier électronique standard sur Internet?",
+      "possibleAnswers": ["SMTP (Simple Mail Transfer Protocol)", "HTTP (Hypertext Transfer Protocol)", "FTP (File Transfer Protocol)", "TCP (Transmission Control Protocol)"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 17,
+      "text": "Qu'est-ce que signifie l'acronyme VPN?",
+      "possibleAnswers": ["Virtual Private Network", "Visual Personal Network", "Virtual Personal Network", "Verified Private Network"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 18,
+      "text": "Quel langage de programmation est principalement utilisé pour le développement de scripts côté client dans les navigateurs web?",
+      "possibleAnswers": ["JavaScript", "Python", "Java", "C#"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 19,
+      "text": "Quel est le principal langage de requête utilisé pour interroger les bases de données relationnelles?",
+      "possibleAnswers": ["SQL (Structured Query Language)", "NoSQL (Not Only SQL)", "JavaScript", "Python"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionId": 20,
+      "text": "Qu'est-ce que signifie l'acronyme URL?",
+      "possibleAnswers": ["Uniform Resource Locator", "Universal Resource Language", "Unified Resource Label", "Unique Resource Link"],
+      "correctAnswerIndex": 0
+    }
+  ]
+}

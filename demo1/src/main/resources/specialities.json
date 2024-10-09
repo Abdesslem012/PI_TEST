@@ -1,0 +1,134 @@
+{
+  "specialites": [
+    {
+      "name": "Développement Web",
+      "description": "Spécialité axée sur le développement d'applications web.",
+      "sectorIds": [
+        {
+          "sectorId": 1,
+          "name": "Développeur Front-End",
+          "description": "Développement de l'interface utilisateur et de l'expérience utilisateur (UI/UX)."
+        },
+        {
+          "sectorId": 2,
+          "name": "Développeur Back-End",
+          "description": "Développement de la logique serveur et de la base de données."
+        },
+        {
+          "sectorId": 3,
+          "name": "Développeur Full-Stack",
+          "description": "Développement à la fois côté client et côté serveur."
+        },
+        {
+          "sectorId": 4,
+          "name": "Ingénieur DevOps",
+          "description": "Gestion de l'infrastructure IT et de la livraison logicielle."
+        }
+      ]
+    },
+    {
+      "name": "Développement Mobile",
+      "description": "Spécialité axée sur le développement d'applications mobiles.",
+      "sectorIds": [
+        {
+          "sectorId": 5,
+          "name": "Développeur iOS",
+          "description": "Développement d'applications pour les appareils Apple."
+        },
+        {
+          "sectorId": 6,
+          "name": "Développeur Android",
+          "description": "Développement d'applications pour les appareils Android."
+        },
+        {
+          "sectorId": 7,
+          "name": "Développeur Cross-Platform",
+          "description": "Développement d'applications pouvant fonctionner sur plusieurs plateformes."
+        },
+        {
+          "sectorId": 8,
+          "name": "Ingénieur QA Mobile",
+          "description": "Assurance qualité et tests d'applications mobiles."
+        }
+      ]
+    },
+    {
+      "name": "Intelligence Artificielle et Machine Learning",
+      "description": "Spécialité axée sur l'intelligence artificielle et l'apprentissage automatique.",
+      "sectorIds": [
+        {
+          "sectorId": 9,
+          "name": "Ingénieur en IA",
+          "description": "Développement de systèmes intelligents et autonomes."
+        },
+        {
+          "sectorId": 10,
+          "name": "Data Scientist",
+          "description": "Analyse et interprétation des données pour prendre des décisions."
+        },
+        {
+          "sectorId": 11,
+          "name": "Ingénieur en apprentissage automatique",
+          "description": "Développement de modèles d'apprentissage automatique."
+        },
+        {
+          "sectorId": 12,
+          "name": "Ingénieur en vision par ordinateur",
+          "description": "Développement de systèmes capables de comprendre et d'interpréter les images."
+        }
+      ]
+    },
+    {
+      "name": "Big Data et Data Engineering",
+      "description": "Spécialité axée sur le traitement et l'analyse de grandes quantités de données.",
+      "sectorIds": [
+        {
+          "sectorId": 13,
+          "name": "Ingénieur Big Data",
+          "description": "Gestion et analyse de données massives."
+        },
+        {
+          "sectorId": 14,
+          "name": "Architecte de données",
+          "description": "Conception et mise en œuvre de l'architecture des systèmes de gestion de données."
+        },
+        {
+          "sectorId": 15,
+          "name": "Ingénieur ETL",
+          "description": "Extraction, transformation et chargement des données."
+        },
+        {
+          "sectorId": 16,
+          "name": "Analyste de données",
+          "description": "Analyse et interprétation des données pour obtenir des informations exploitables."
+        }
+      ]
+    },
+    {
+      "name": "Sécurité Informatique",
+      "description": "Spécialité axée sur la protection des systèmes informatiques contre les menaces.",
+      "sectorIds": [
+        {
+          "sectorId": 17,
+          "name": "Spécialiste en cybersécurité",
+          "description": "Protection des systèmes informatiques contre les attaques et les intrusions."
+        },
+        {
+          "sectorId": 18,
+          "name": "Analyste en sécurité des systèmes d'information",
+          "description": "Surveillance et analyse des systèmes pour détecter les menaces."
+        },
+        {
+          "sectorId": 19,
+          "name": "Expert en sécurité réseau",
+          "description": "Protection des réseaux informatiques contre les attaques et les intrusions."
+        },
+        {
+          "sectorId": 20,
+          "name": "Éthical Hacker",
+          "description": "Tests de sécurité éthiques pour identifier et corriger les vulnérabilités."
+        }
+      ]
+    }
+  ]
+}

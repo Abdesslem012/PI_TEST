@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<style>
+    .question-container {
+        border: 2px solid #ccc; /* Cadre gris clair */
+        padding: 15px;
+        margin-bottom: 20px; /* Espace entre chaque question */
+        border-radius: 10px; /* Coins arrondis pour le cadre */
+        box-shadow: 0 2px 5px rgba(0,0,0,.1); /* Légère ombre pour le cadre */
+        background-color: #f9f9f9; /* Fond légèrement gris pour chaque question */
+    }
+
+    .question-text {
+        color: #007bff; /* Rouge */
+        margin-bottom: 10px; /* Espace entre la question et la réponse */
+    }
+
+    .reponse-correcte {
+        color: #155724; /* Vert plus foncé pour le texte */
+        background-color: #d4edda; /* Vert clair pour le fond */
+        border-left: 8px solid #28a745; /* Vert plus vif pour la bordure */
+        padding: 10px;
+        border-radius: 8px; /* Coins arrondis */
+        box-shadow: 0 2px 4px rgba(0,0,0,.2); /* Ombre légère pour un effet en profondeur */
+        font-size: 16px; /* Taille de police légèrement plus grande */
+    }
+
+    .question-checkbox {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    label {
+        cursor: pointer;
+        display: block; /* Assurez-vous que l'étiquette utilise tout l'espace disponible pour un meilleur clic */
+    }
+
+</style>
+
+<div class="all-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="logo-pro">
+                    <a href="/home"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-advance-area">
+        <div class="header-top-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="header-top-wraper">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                </div>
+                                <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                    <div class="header-top-menu tabl-d-n">
+                                        <ul class="nav navbar-nav mai-top-nav">
+                                            <li class="nav-item"><a href="/home" class="nav-link">Home</a>
+                                            </li>
+                                            <li class="nav-item"><a href="#" class="nav-link">About Us</a>
+                                            </li>
+                                            <li class="nav-item"><a href="#" class="nav-link">SDGs</a>
+                                            </li>
+                                            <li class="nav-item dropdown res-dis-nn">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Services <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                                <div role="menu" class="dropdown-menu animated zoomIn">
+                                                    <a href="/addLesson" class="dropdown-item">Add Lesson</a>
+                                                    <a href="/addUnit" class="dropdown-item">Add Unit</a>
+                                                    <a href="/addSector" class="dropdown-item">Add Sector</a>
+                                                    <a href="/addStudent" class="dropdown-item">Add Student</a>
+                                                    <a href="/addTeacher" class="dropdown-item">Add Professor</a>
+                                                    <a href="/addClasse" class="dropdown-item">Add Classe</a>
+                                                    <a href="/addProgramme" class="dropdown-item">Add Programme</a>
+                                                    <a href="/addGroupeStudent" class="dropdown-item">Add Groupe</a>
+                                                    <a href="/addPresence" class="dropdown-item">Add Presence</a>
+                                                    <a href="/addRating" class="dropdown-item">Add Rating</a>
+                                                    <a href="/addObjective" class="dropdown-item">Add Objective</a>
+                                                    <a href="/addRessource" class="dropdown-item">Add Ressource</a>
+                                                    <a href="/addSpecialtie" class="dropdown-item">Add Specialite</a>
+                                                    <a href="/addEvent" class="dropdown-item">Add Event</a>
+                                                    <a href="/addFeedback" class="dropdown-item">Add Feedback</a>
+
+
+
+
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown res-dis-nn">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Pages <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                                <div role="menu" class="dropdown-menu animated zoomIn">
+                                                    <a href="/allLesson" class="dropdown-item">All Lesson</a>
+                                                    <a href="/allUnit" class="dropdown-item">All Unit</a>
+                                                    <a href="/allSector" class="dropdown-item">All Sector</a>
+                                                    <a href="/allStudent" class="dropdown-item">All Student</a>
+                                                    <a href="/allTeacher" class="dropdown-item">All Professor</a>
+                                                    <a href="/allClasse" class="dropdown-item">All Classe</a>
+                                                    <a href="/allProgramme" class="dropdown-item">All Programme</a>
+                                                    <a href="/allGroupeStudent" class="dropdown-item">All Groupe Student</a>
+                                                    <a href="/allPresence" class="dropdown-item">All Presence</a>
+                                                    <a href="/allRating" class="dropdown-item">All Rating</a>
+                                                    <a href="/allQuiz" class="dropdown-item">All Quiz</a>
+                                                    <a href="/allQuestion" class="dropdown-item">All Question</a>
+                                                    <a href="/allObjective" class="dropdown-item">All Objective</a>
+                                                    <a href="/allRessource" class="dropdown-item">All Ressource</a>
+                                                    <a href="/allSpecialtie" class="dropdown-item">All Specialite</a>
+                                                    <a href="/allEvent" class="dropdown-item">All Event</a>
+                                                    <a href="/allFeedback" class="dropdown-item">All Feedback</a>
+
+
+
+                                                </div>
+                                            </li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                    <div class="header-right-info">
+                                        <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                            <li class="nav-item">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                    <img src="img/product/pro4.jpg" alt="" />
+                                                    <span class="admin-name">Bytes Minds</span>
+                                                    <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                                                </a>
+                                                <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                    <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                    </li>
+                                                    <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
+                                                    </li>
+                                                    <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated zoomIn">
+
+                                            </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcome-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="breadcome-list single-page-breadcome">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="breadcome-heading">
+                                        <form role="search" class="sr-input-func">
+                                            <input type="text" placeholder="Search..." class="search-int form-control">
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <ul class="breadcome-menu">
+                                        <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                        </li>
+                                        <li><span class="bread-blod">Consulter Questions</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="breadcome-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <h1>Questions du Quiz</h1>
+                <br>
+                <div id="questionsContainer"></div>
+                <div style="text-align: center;">
+                <!--<button onclick="imprimerQuizEnPDF()" class="btn btn-danger"><i class="fas fa-file-pdf-o"></i> Imprimer en PDF</button>-->
+                <button onclick="desaffecterQuestionsSelectionnees()" class="btn btn-success">Unassign Questions From Quiz</button>
+            </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <div class="footer-copyright-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="footer-copy-right">
+                        <p>Copyright 2024 Courzelo - Tous droits réservés</p>
+                        <p>Made with creativity by Byte Minds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jquery
+    ============================================ -->
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="js/bootstrap.min.js"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="js/wow.min.js"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="js/jquery-price-slider.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="js/jquery.meanmenu.js"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- sticky JS
+    ============================================ -->
+<script src="js/jquery.sticky.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="js/jquery.scrollUp.min.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+<!-- metisMenu JS
+    ============================================ -->
+<script src="js/metisMenu/metisMenu.min.js"></script>
+<script src="js/metisMenu/metisMenu-active.js"></script>
+<!-- morrisjs JS
+    ============================================ -->
+<script src="js/sparkline/jquery.sparkline.min.js"></script>
+<script src="js/sparkline/jquery.charts-sparkline.js"></script>
+<!-- calendar JS
+    ============================================ -->
+<script src="js/calendar/moment.min.js"></script>
+<script src="js/calendar/fullcalendar.min.js"></script>
+<script src="js/calendar/fullcalendar-active.js"></script>
+<!-- maskedinput JS
+    ============================================ -->
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/masking-active.js"></script>
+<!-- datepicker JS
+    ============================================ -->
+<script src="js/datepicker/jquery-ui.min.js"></script>
+<script src="js/datepicker/datepicker-active.js"></script>
+<!-- form validate JS
+    ============================================ -->
+<script src="js/form-validation/jquery.form.min.js"></script>
+<script src="js/form-validation/jquery.validate.min.js"></script>
+<script src="js/form-validation/form-active.js"></script>
+<!-- dropzone JS
+    ============================================ -->
+<script src="js/dropzone/dropzone.js"></script>
+<!-- tab JS
+    ============================================ -->
+<script src="js/tab.js"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="js/plugins.js"></script>
+<!-- main JS
+    ============================================ -->
+<script src="js/main.js"></script>
+<!-- tawk chat JS
+    ============================================ -->
+<script src="js/tawk-chat.js"></script>
+
+<script>
+    function getQuizIdFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('quizId');
+    }
+
+    function loadQuestionsForQuiz(quizId) {
+        fetch(`/api/questions/${quizId}/questions`)
+            .then(response => response.json())
+            .then(questions => {
+                const questionsContainer = document.getElementById('questionsContainer');
+                // Vérifie si la liste des questions est vide
+                if (questions.length === 0) {
+                    questionsContainer.innerHTML = '<p>Aucune question affectée à ce quiz.</p>';
+                } else {
+                    questionsContainer.innerHTML = questions.map(question => `
+    <div class="question-container">
+    <div class="question-text">
+        <input type="checkbox" class="question-checkbox" data-id="${question.questionId}" />
+        <label>
+            <h5>Question : ${question.text}</h5>
+        </label>
+        </div>
+            <p class="reponse-correcte">Réponse correcte: ${question.possibleAnswers[question.correctAnswerIndex]}</p>
+    </div>
+`).join('');
+                }
+            })
+            .catch(error => console.error('Erreur lors du chargement des questions:', error));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const quizId = getQuizIdFromUrl();
+        if (quizId) {
+            loadQuestionsForQuiz(quizId);
+        } else {
+            console.error("Quiz ID not found in URL");
+            document.getElementById('questionsContainer').innerHTML = '<p>ID du quiz non trouvé dans l\'URL.</p>';
+        }
+    });
+    /* async function imprimerQuizEnPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Charger l'image du logo (assurez-vous que cette partie fonctionne comme attendu)
+        let logo = await loadImage('http://localhost:8083/img/logo/logo.png'); // Assurez-vous que cette URL est accessible
+        doc.addImage(logo, 'PNG', 10, 10, 40, 20);
+
+        let y = 60; // Décaler pour le contenu après le logo
+
+        // Titre du Quiz stylisé
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(22);
+        doc.setTextColor(19, 69, 99); // Une couleur bleu foncé
+        const titreQuiz = document.querySelector('h1').textContent;
+        doc.text(titreQuiz, 70, 50);
+
+        // Nom de la plateforme "Courzelo" en bleu
+        doc.setFontSize(16);
+        doc.setTextColor(3, 101, 192);
+        //doc.text("Courzelo", 60, 45);
+
+        // Réinitialiser le style pour les questions et réponses
+        doc.setFontSize(12);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(0, 0, 0);
+
+        const questions = document.querySelectorAll('#questionsContainer .question-container');
+        questions.forEach((question, index) => {
+            // Vérification de l'espace disponible sur la page
+            if (y > 260) {
+                doc.addPage();
+                y = 10;
+            }
+
+            const questionText = question.querySelector('h5').textContent;
+            const reponseElement = question.querySelector('.reponse-correcte');
+            const reponseText = reponseElement ? reponseElement.textContent : 'Réponse non trouvée';
+
+            // Ajout d'un fond coloré pour chaque question
+            doc.setDrawColor(0);
+            doc.setFillColor(222, 235, 247); // Fond bleu clair pour la question
+            doc.rect(10, y, 190, 8, 'F');
+            doc.setTextColor(33, 37, 41);
+            doc.text(`Q${index + 1}: ${questionText}`, 15, y + 6);
+            y += 12;
+
+            // Ajout de la réponse avec un fond vert
+            if (y > 270) {
+                doc.addPage();
+                y = 10;
+            }
+            doc.setFillColor(233, 245, 233); // Fond vert clair pour la réponse
+            doc.rect(10, y, 190, 8, 'F');
+            doc.setTextColor(40, 167, 69);
+            doc.text(`R: ${reponseText}`, 15, y + 6);
+            y += 18; // Espace avant la prochaine question
+            const totalPages = doc.internal.getNumberOfPages();
+
+            for (let i = 1; i <= totalPages; i++) {
+                doc.setPage(i);
+                // Définissez la couleur, la police, etc., selon vos besoins
+                doc.setTextColor(100);
+                doc.setFontSize(10);
+                // Calculez la position x pour centrer le texte. Vous pouvez ajuster cela selon vos besoins.
+                const pageWidth = doc.internal.pageSize.getWidth();
+                const str = 'Page ' + i + ' sur ' + totalPages;
+                // Centrer le numéro de page en bas de chaque page. Vous pouvez ajuster la position y selon vos besoins.
+                const y = doc.internal.pageSize.getHeight() - 10; // Ajustez cette valeur en fonction de l'endroit où vous souhaitez que le numéro de page apparaisse
+                doc.text(str, pageWidth / 2, y, { align: 'center' });
+            }
+        });
+
+        // Sauvegarde du PDF
+        doc.save('quiz.pdf');
+    }
+
+    // Fonction d'assistance pour charger une image
+    async function loadImage(url) {
+        return new Promise((resolve, reject) => {
+            let img = new Image();
+            img.onload = () => {
+                let canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                let ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+                let dataURL = canvas.toDataURL("image/png");
+                resolve(dataURL);
+            };
+            img.onerror = reject;
+            img.setAttribute("crossOrigin", "anonymous"); // Travailler autour des problèmes CORS
+            img.src = url;
+        });
+    }
+    */
+
+    function desaffecterQuestionsSelectionnees() {
+        const quizId = getQuizIdFromUrl();
+        const selectedQuestionIds = Array.from(document.querySelectorAll('.question-checkbox:checked'))
+            .map(checkbox => checkbox.getAttribute('data-id'));
+
+        const params = new URLSearchParams({
+            quizId: quizId
+        });
+
+        // Pour chaque ID de question sélectionné, ajoutez-le comme un paramètre séparé.
+        selectedQuestionIds.forEach(id => params.append('questions', id));
+
+        fetch(`/api/quizzes/unassign-questions-from-quiz?${params}`, {
+            method: 'POST',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur lors de la désaffectation des questions');
+                }
+                // Logique pour gérer la réponse réussie...
+                alert('Les questions ont été désaffectées avec succès.');
+            })
+            .catch(error => console.error('Erreur:', error));
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</body>
+</html>

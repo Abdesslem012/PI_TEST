@@ -1,0 +1,17 @@
+[
+  {
+    "badgeId": 1,
+    "name": "Beginner",
+    "description": "You've completed your first quiz!"
+  },
+  {
+    "badgeId": 2,
+    "name": "Intermediate",
+    "description": "You're making progress!"
+  },
+  {
+    "badgeId": 3,
+    "name": "Expert",
+    "description": "You're a quiz master!"
+  }
+]

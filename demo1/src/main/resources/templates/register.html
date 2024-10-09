@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome CSS
+		============================================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS
+		============================================ -->
+    <link rel="stylesheet" href="custom.css">
+
+    <style>
+        body {
+            background-color: #D9D9D9;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-form {
+            max-width: 1000px; /* Augmentez la largeur maximale selon vos besoins */
+            padding: 80px; /* Augmentez la valeur de padding pour plus d'espace à l'intérieur de la boîte */
+            background-color: #ffffff;
+            border-radius: 60px; /* Augmentez la valeur de border-radius pour une apparence plus arrondie */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Augmentez la taille et l'opacité de l'ombre portée */
+        }
+
+
+
+
+        .login-form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form-header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .login-form-title {
+            color: #284D63;
+        }
+
+        .login-form-footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .login-form-footer a {
+            color: #5784BA;
+        }
+
+        .btn-primary {
+            background-color: #284D63;
+            border-color: #284D63;
+        }
+
+        .btn-primary:hover {
+            background-color: #1c3547;
+            border-color: #1c3547;
+        }
+
+        .social-icon {
+            color: #5784BA;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .social-icon:hover {
+            color: #284D63;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300vh;
+        }
+        .custom-control-lg {
+            height: 50px; /* Ajustez la hauteur en fonction de vos préférences */
+            font-size: 20px; /* Ajustez la taille de la police en fonction de vos préférences */
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div class="centered">
+    <div class="login-form">
+        <div class="login-form-header">
+            <img src="img/logo/logo.png" alt="Logo">
+        </div>
+        <form id="registerForm" novalidate>
+            <div class="mb-4">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control custom-control-lg" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control custom-control-lg" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="mb-4">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control custom-control-lg" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control custom-control-lg" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="mb-4">
+                <label for="confirmEmail" class="form-label">Confirm Email Address</label>
+                <input type="email" class="form-control custom-control-lg" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email address" required>
+            </div>
+            <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="newsletterCheckbox" checked>
+                <label class="form-check-label" for="newsletterCheckbox">Sign up for our newsletter</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-primary">Register</button>
+                <button type="button" class="btn btn-lg btn-default">Cancel</button>
+            </div>
+        </form>
+
+
+        <div class="login-form-footer">
+            <p>Already have an account? <a href="/login">Login</a></p>
+            <div>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <!-- Ajoutez d'autres icônes de réseaux sociaux au besoin -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="custom.js"></script>
+</body>
+
+</html>
