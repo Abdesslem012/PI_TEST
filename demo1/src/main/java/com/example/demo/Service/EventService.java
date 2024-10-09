@@ -22,7 +22,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 
 
 @Service
@@ -102,7 +102,7 @@ public class EventService {
     public void registerStudentForEvent(String eventName, String firstName) {
         Event event = eventRepository.findByNomEvent(eventName);
         if (event == null) {
-            throw new javax.persistence.EntityNotFoundException("Event not found");
+            throw new jakarta.persistence.EntityNotFoundException("Event not found");
         }
 
         // Vérifier le nombre de participants actuels par rapport à maxParticipants
@@ -113,7 +113,7 @@ public class EventService {
         // Recherche de l'étudiant par son prénom
         Student student = studentRepository.findByFirstName(firstName);
         if (student == null) {
-            throw new javax.persistence.EntityNotFoundException("Student not found");
+            throw new jakarta.persistence.EntityNotFoundException("Student not found");
         }
 
         // Logique pour inscrire l'étudiant à l'événement
@@ -130,7 +130,7 @@ public class EventService {
 
     public int updateRemainingSpots(Long eventId) {
         Event event = eventRepository.findById(eventId)
-                .orElseThrow(() -> new javax.persistence.EntityNotFoundException("Event not found"));
+                .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Event not found"));
 
         int remainingSpots = event.getMaxParticipants() - event.getRegistrations().size();
         event.setRemainingSpots(Math.max(0, remainingSpots));
@@ -160,13 +160,13 @@ public class EventService {
     // Méthode pour obtenir un événement par son ID
     public Event getEventById(Long eventId) {
         return eventRepository.findById(eventId)
-                .orElseThrow(() -> new javax.persistence.EntityNotFoundException("Event not found"));
+                .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Event not found"));
     }
 
     // Méthode pour obtenir un étudiant par son ID
     public Student getStudentById(Long studentId) {
         return studentRepository.findById(studentId)
-                .orElseThrow(() -> new javax.persistence.EntityNotFoundException("Student not found"));
+                .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Student not found"));
     }
 
 
@@ -186,7 +186,7 @@ public class EventService {
 
     public Integer getAvailableSeats(Long eventId) {
         Event event = eventRepository.findById(eventId)
-                .orElseThrow(() -> new javax.persistence.EntityNotFoundException("Event not found with id: " + eventId));
+                .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Event not found with id: " + eventId));
 
         // Calcul du nombre de places disponibles
         Integer availableSeats = event.getMaxParticipants() - event.getRegistrations().size();

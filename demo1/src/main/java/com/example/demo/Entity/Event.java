@@ -16,8 +16,8 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
-import javax.persistence.CascadeType;
-import javax.persistence.OneToMany;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
 
 
 @Document
@@ -54,7 +54,7 @@ public class Event {
     private Integer maxParticipants;
 
 
-    @javax.persistence.OneToMany(mappedBy = "event", cascade = javax.persistence.CascadeType.ALL)
+    @jakarta.persistence.OneToMany(mappedBy = "event", cascade = jakarta.persistence.CascadeType.ALL)
     private List<Registration> registrations = new ArrayList<>();
 /*
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
