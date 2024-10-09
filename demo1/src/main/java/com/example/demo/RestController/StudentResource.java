@@ -6,18 +6,16 @@ import com.example.demo.Service.EmailService;
 import com.example.demo.Service.StudentService;
 import com.example.demo.util.NotFoundException;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import jakarta.mail.MessagingException;
-import jakarta.mail.internet.MimeMessage;
+
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.javamail.MimeMessageHelper;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.persistence.EntityNotFoundException;
 
 @CrossOrigin("http://localhost:4200/")
 @RestController
@@ -101,7 +99,7 @@ public class StudentResource {
             sendEmailToStudent(student, className); // Appel de la méthode pour envoyer l'e-mail
             return ResponseEntity.ok("Student " + student.getFirstName() + " " + student.getLastName() +
                     " assigned to class " + className + " successfully.");
-        } catch (EntityNotFoundException e) {
+        } catch (NotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred.");
