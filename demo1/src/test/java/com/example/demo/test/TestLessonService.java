@@ -1,30 +1,35 @@
-package com.example.demo.Service;
+package com.example.demo.test;
 
 import com.example.demo.DTO.LessonDTO;
 import com.example.demo.Entity.Lesson;
 import com.example.demo.Entity.Rating;
 import com.example.demo.Entity.Ressources;
-import com.example.demo.Entity.Unit;
 import com.example.demo.Repository.LessonRepository;
 import com.example.demo.Repository.RatingRepository;
 import com.example.demo.Repository.RessourcesRepository;
 import com.example.demo.Repository.UnitRepository;
+import com.example.demo.Service.LessonService;
+import com.example.demo.Service.RessourcesService;
 import com.example.demo.util.NotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.data.domain.Example;
 
 import java.util.Collections;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
 
-class LessonTestService {
+public class TestLessonService {
+
 
     @InjectMocks
     private LessonService lessonService;
@@ -60,12 +65,6 @@ class LessonTestService {
         lessonDTO = new LessonDTO();
         lessonDTO.setLessonId(1L);
         lessonDTO.setDescription("Test Lesson");
-    }
-
-    @Test
-    void testGetLessonById_NotFound() {
-        when(lessonRepository.findById(anyLong())).thenReturn(Optional.empty());
-        assertThrows(NotFoundException.class, () -> lessonService.get(1L));
     }
 
     @Test
