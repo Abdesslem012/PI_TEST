@@ -17,11 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-<<<<<<< Updated upstream
-import javax.persistence.EntityNotFoundException;
-=======
 import jakarta.persistence.EntityNotFoundException;
->>>>>>> Stashed changes
 import java.util.List;
 import java.util.NoSuchElementException;
 

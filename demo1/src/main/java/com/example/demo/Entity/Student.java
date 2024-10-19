@@ -9,8 +9,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
 import java.time.LocalDate;
 import java.util.Set;
 
