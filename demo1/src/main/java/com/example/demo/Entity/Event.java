@@ -16,8 +16,13 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
+<<<<<<< Updated upstream
 import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
+=======
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
+>>>>>>> Stashed changes
 
 
 @Document
