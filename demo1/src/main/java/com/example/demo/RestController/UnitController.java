@@ -27,7 +27,16 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/units", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UnitController {
+
     private final UnitService unitService;
+
+    // Define constants for repeated strings
+    private static final String UPLOAD_DIR = "src/main/resources/static/pdf";
+    private static final String PDF_DIRECTORY = UPLOAD_DIR;
+    private static final String CONTENT_PARAM = "content";
+    private static final String NAME_PARAM = "name";
+    private static final String DESCRIPTION_PARAM = "description";
+    private static final String FILE_NAME_PREFIX = "/pdf/";
 
     public UnitController(final UnitService unitService) {
         this.unitService = unitService;
@@ -43,18 +52,11 @@ public class UnitController {
         return ResponseEntity.ok(unitService.get(unitId));
     }
 
-    /*@PostMapping
-    @ApiResponse(responseCode = "201")
-    public ResponseEntity<Long> createUnit(@RequestBody @Valid final UnitDTO unitDTO) {
-        final Long createdUnitId = unitService.create(unitDTO);
-        return new ResponseEntity<>(createdUnitId, HttpStatus.CREATED);
-    }*/
-
     @PostMapping
     @ApiResponse(responseCode = "201")
-    public ResponseEntity<Long> createUnit(@RequestParam("content") MultipartFile contentFile,
-                                           @RequestParam("name") String name,
-                                           @RequestParam("description") String description) {
+    public ResponseEntity<Long> createUnit(@RequestParam(CONTENT_PARAM) MultipartFile contentFile,
+                                           @RequestParam(NAME_PARAM) String name,
+                                           @RequestParam(DESCRIPTION_PARAM) String description) {
         try {
             String contentUrl = saveFileToServer(contentFile);
 
@@ -65,39 +67,24 @@ public class UnitController {
 
             final Long createdUnitId = unitService.create(unitDTO);
             return new ResponseEntity<>(createdUnitId, HttpStatus.CREATED);
-        } catch (IOException e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 
     private String saveFileToServer(MultipartFile contentFile) throws IOException {
-        String uploadDir = "src\\main\\resources\\static\\pdf"; // Pour obtenir le chemin absolu
-
-        File directory = new File(uploadDir);
+        File directory = new File(UPLOAD_DIR);
         if (!directory.exists()) {
             directory.mkdirs();
         }
 
         String fileName = System.currentTimeMillis() + "_" + contentFile.getOriginalFilename();
-        Path filePath = Paths.get(uploadDir, fileName);
+        Path filePath = Paths.get(UPLOAD_DIR, fileName);
 
         Files.copy(contentFile.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-        return "/pdf/" + fileName; // Assurez-vous que ce chemin est correctement servi par Spring Boot
+        return FILE_NAME_PREFIX + fileName; // Ensure this path is correctly served by Spring Boot
     }
-
-
-    /*@PutMapping("/{unitId}")
-    public ResponseEntity<Long> updateUnit(@PathVariable(name = "unitId") final Long unitId,
-            @RequestBody @Valid final UnitDTO unitDTO) {
-        unitService.update(unitId, unitDTO);
-        return ResponseEntity.ok(unitId);
-    }*/
-
-
-    private static final String PDF_DIRECTORY = "src\\main\\resources\\static\\pdf"; // Chemin d'accès au répertoire des fichiers PDF
 
     @GetMapping("/pdf/{filename}")
     public ResponseEntity<InputStreamResource> getPdf(@PathVariable String filename) throws IOException {
@@ -118,37 +105,34 @@ public class UnitController {
                 .body(new InputStreamResource(new FileInputStream(pdfFile)));
     }
 
-    @PutMapping(path = "/{unitId}" ,consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PutMapping(path = "/{unitId}", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Long> updateUnit(@PathVariable(name = "unitId") Long unitId,
-                                           @RequestParam(value = "content") MultipartFile contentFile,
-                                           @RequestParam("name") String name,
-                                           @RequestParam("description") String description) {
+                                           @RequestParam(value = CONTENT_PARAM) MultipartFile contentFile,
+                                           @RequestParam(NAME_PARAM) String name,
+                                           @RequestParam(DESCRIPTION_PARAM) String description) {
         try {
-            // Si un nouveau fichier image est fourni, enregistrez-le sur le serveur et récupérez son URL
+            // If a new content file is provided, save it on the server and get its URL
             String contentUrl = null;
             if (contentFile != null && !contentFile.isEmpty()) {
                 contentUrl = saveFileToServer(contentFile);
             }
 
-            // Créer une instance de CoursDTO et lui attribuer les données fournies
+            // Create a UnitDTO instance and assign the provided data
             UnitDTO unitDTO = new UnitDTO();
             unitDTO.setName(name);
             unitDTO.setDescription(description);
 
-            // Si une nouvelle image a été fournie, mettre à jour l'URL de l'image
+            // If a new content file was provided, update the content URL
             if (contentUrl != null) {
                 unitDTO.setContent(contentUrl);
             }
 
-            // Mettre à jour le cours avec le DTO fourni
+            // Update the unit with the provided DTO
             unitService.update(unitId, unitDTO);
 
             return ResponseEntity.ok(unitId);
-        } catch (IOException e) {
-            // Gérer les erreurs de lecture du fichier
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         } catch (Exception e) {
-            // Gérer d'autres exceptions non prévues
+            // Handle file reading errors
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
@@ -163,5 +147,4 @@ public class UnitController {
         unitService.delete(unitId);
         return ResponseEntity.noContent().build();
     }
-
 }

@@ -79,6 +79,13 @@
             <artifactId>hibernate-core</artifactId>
             <version>6.5.3.Final</version>
         </dependency>
+        <!-- Add H2 dependency for in-memory database -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
 
     </dependencies>
 

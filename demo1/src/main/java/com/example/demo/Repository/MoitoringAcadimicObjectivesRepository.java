@@ -1,12 +1,9 @@
 package com.example.demo.Repository;
 
 
-
 import com.example.demo.Entity.MoitoringAcadimicObjectives;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.data.mongodb.repository.MongoRepository;
-
-import java.util.Optional;
 
 public interface MoitoringAcadimicObjectivesRepository extends MongoRepository<MoitoringAcadimicObjectives, Long> {
 
