@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build') {
+            steps {
+                dir('demo1') {
+                    sh 'mvn clean package' // Build the application
+                }
+            }
+        }
+        stage('JUnit Test') {
+            steps {
+                dir('demo1') {
+                    sh 'mvn clean test' // Run JUnit tests
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    def mvn = tool 'Default Maven'
+                    dir('demo1') {
+                        withSonarQubeEnv('SonarQube') { // Specify the name of the SonarQube server configuration
+                            sh "${mvn}/bin/mvn sonar:sonar " +
+                               "-Dsonar.projectKey=Abdesslem012_DevOps " +
+                               "-Dsonar.projectName='DevOps' " +
+                               "-Dsonar.jacoco.reportPaths=target/jacoco.exec"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Please check the logs.'
+        }
+    }
+}
