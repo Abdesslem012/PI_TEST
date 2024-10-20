@@ -9,7 +9,7 @@ pipeline {
         }
        stage('JUnit Test') {
                     steps {
-                        dir('kaddem') {
+                        dir('demo1') {
                             sh 'mvn clean test'
                         }
                     }
