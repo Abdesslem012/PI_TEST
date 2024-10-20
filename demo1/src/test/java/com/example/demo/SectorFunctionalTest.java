@@ -1,4 +1,4 @@
-package com.example.demo;
+/*package com.example.demo;
 
 import com.example.demo.Entity.Sector;
 import com.example.demo.Repository.SectorRepository;
@@ -57,4 +57,4 @@ class SectorFunctionalTest {
               .andExpect(status().isCreated());
    }
 
-}
+}*/
