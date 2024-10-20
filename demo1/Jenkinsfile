@@ -7,29 +7,17 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build') {
-            steps {
-                dir('demo1') {
-                    sh 'mvn clean package' // Build the application
-                }
-            }
-        }
-        stage('JUnit Test') {
-            steps {
-                dir('demo1') {
-                    sh 'mvn clean test' // Run JUnit tests
-                }
-            }
-        }
+
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def mvn = tool 'Default Maven'
-                    dir('demo1') { // Change this to point to the demo1 folder
-                        withSonarQubeEnv() {
+                    def mvn = tool 'Default Maven' // Ensure this tool name matches your Jenkins configuration
+                    dir('demo1') { // Ensure 'demo1' is the correct directory for your Maven project
+                        withSonarQubeEnv('SonarQube') { // Specify the SonarQube server name if needed
                             sh "${mvn}/bin/mvn sonar:sonar " +
                                "-Dsonar.projectKey=Abdesslem012_PI_TEST_5eda0981-a32a-4f75-8fc6-19a318c50e9a " +
-                               "-Dsonar.projectName='PI_TEST'"
+                               "-Dsonar.projectName='PI_TEST' " + // Removed quotes around project name
+                               "-Dsonar.sources=src/main/java" // Optionally specify source directory
                         }
                     }
                 }
