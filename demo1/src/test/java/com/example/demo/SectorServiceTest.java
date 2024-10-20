@@ -1,4 +1,4 @@
-/*package com.example.demo;
+package com.example.demo;
 
 import com.example.demo.DTO.SectorDTO;
 import com.example.demo.Entity.Sector;
@@ -140,4 +140,3 @@ import static org.mockito.Mockito.*;
     }
 
 }
-*/

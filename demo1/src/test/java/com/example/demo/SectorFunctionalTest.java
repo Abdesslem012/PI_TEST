@@ -1,4 +1,4 @@
-/*package com.example.demo;
+package com.example.demo;
 
 import com.example.demo.Entity.Sector;
 import com.example.demo.Repository.SectorRepository;
@@ -47,7 +47,7 @@ class SectorFunctionalTest {
    // Add more test methods for other functionality as needed
    // For example, testing creating a new sector
    @Test
-   public void testCreateUnit() throws Exception {
+    void testCreateUnit() throws Exception {
       MockMultipartFile contentFile = new MockMultipartFile("content", "test.pdf", "application/pdf", "test content".getBytes());
 
       mockMvc.perform(multipart("/api/units")
@@ -57,4 +57,4 @@ class SectorFunctionalTest {
               .andExpect(status().isCreated());
    }
 
-}*/
+}
