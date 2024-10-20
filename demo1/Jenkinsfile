@@ -21,21 +21,6 @@ pipeline {
                 }
             }
         }
-        stage('SonarQube Analysis') {
-            steps {
-                script {
-                    def mvn = tool 'Default Maven'
-                    dir('demo1') {
-                        withSonarQubeEnv('SonarQube') { // Specify the name of the SonarQube server configuration
-                            sh "${mvn}/bin/mvn sonar:sonar " +
-                               "-Dsonar.projectKey=Abdesslem012_DevOps " +
-                               "-Dsonar.projectName='DevOps' " +
-                               "-Dsonar.jacoco.reportPaths=target/jacoco.exec"
-                        }
-                    }
-                }
-            }
-        }
     }
 
     post {
