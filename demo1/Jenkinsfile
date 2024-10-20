@@ -22,7 +22,12 @@ pipeline {
             }
         }
     }
-
+stage('SonarQube Analysis') {
+    def mvn = tool 'Default Maven';
+    withSonarQubeEnv() {
+      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=Abdesslem012_PI_TEST_5eda0981-a32a-4f75-8fc6-19a318c50e9a -Dsonar.projectName='PI_TEST'"
+    }
+  }
     post {
         success {
             echo 'Pipeline completed successfully!'
