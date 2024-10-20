@@ -7,6 +7,13 @@ pipeline {
                 checkout scm
             }
         }
+       stage('JUnit Test') {
+                    steps {
+                        dir('kaddem') {
+                            sh 'mvn clean test'
+                        }
+                    }
+                }
 
         stage('SonarQube Analysis') {
             steps {
@@ -15,8 +22,9 @@ pipeline {
                     dir('demo1') { // Ensure the correct directory for pom.xml
                         withSonarQubeEnv() { // Ensure SonarQube server is configured in Jenkins
                             sh "${mvn}/bin/mvn clean verify sonar:sonar " +
-                               "-Dsonar.projectKey=Abdesslem012_PI_TEST_5eda0981-a32a-4f75-8fc6-19a318c50e9a " +
-                               "-Dsonar.projectName=PI_TEST" // Removed quotes around project name
+                               "-Dsonar.projectKey=Abdesslem012_PI_TEST " +
+                               "-Dsonar.projectName=PI_TEST" +
+                               "-Dsonar.jacoco.reportPaths=target/jacoco.exec"
                         }
                     }
                 }
