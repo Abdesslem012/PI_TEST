@@ -7,11 +7,25 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Build') {
+            steps {
+                dir('demo1') {
+                    sh 'mvn clean package' // Build the application
+                }
+            }
+        }
+        stage('JUnit Test') {
+            steps {
+                dir('demo1') {
+                    sh 'mvn clean test' // Run JUnit tests
+                }
+            }
+        }
         stage('SonarQube Analysis') {
             steps {
                 script {
                     def mvn = tool 'Default Maven'
-                    dir('pi_test') { // Change to your project directory
+                    dir('demo1') { // Change this to point to the demo1 folder
                         withSonarQubeEnv() {
                             sh "${mvn}/bin/mvn sonar:sonar " +
                                "-Dsonar.projectKey=Abdesslem012_PI_TEST_5eda0981-a32a-4f75-8fc6-19a318c50e9a " +
@@ -25,10 +39,10 @@ pipeline {
 
     post {
         success {
-            echo 'SonarQube analysis completed successfully!'
+            echo 'Pipeline completed successfully!'
         }
         failure {
-            echo 'SonarQube analysis failed. Please check the logs.'
+            echo 'Pipeline failed. Please check the logs.'
         }
     }
 }
